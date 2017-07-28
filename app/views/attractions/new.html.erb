@@ -1,0 +1,20 @@
+<%= form_tag attractions_path do %>
+<%= label_tag(:'attraction[name]', "Name")  %>
+<%= text_field_tag :'attraction[name]'  %>
+<br>
+<%= label_tag(:'attraction[tickets]', "Tickets required")  %>
+<%= text_field_tag :'attraction[tickets]'  %>
+<br>
+<%= label_tag(:'attraction[nausea_rating]', "How much more nauseous will this make users?")  %>
+<%= number_field_tag :'attraction[nausea_rating]', nil %>
+<br>
+<%= label_tag(:'attraction[happiness_rating]', "How much more happier will this make users?")  %>
+<%= number_field_tag :'attraction[happiness_rating]' %>
+<br>
+<%= label_tag(:'attraction[min_height]', "What is the minimum height per user?")  %>
+<%= number_field_tag :'attraction[min_height]' %>
+<br>
+<br>
+<%= submit_tag "Create Attraction" %>
+<% end %>
+

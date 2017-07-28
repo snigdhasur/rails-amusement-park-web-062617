@@ -20,9 +20,16 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+
+
+
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+          <li><a href="/users/<%= session[:user_id]%>">Account</a></li> 
+          <li><a href="/attractions">Attractions</a></li> 
+          <li><a href=<%= delete_session_path%>>Log Out</a></li> 
+
            <!--  nav here -->
           </ul>
         </div><!--/.nav-collapse -->
