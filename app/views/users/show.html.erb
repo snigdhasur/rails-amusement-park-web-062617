@@ -10,14 +10,16 @@
 
 
 <br>
+<%= link_to 'Edit', edit_user_path %>
+<br>
 <%= link_to 'Log Out', delete_session_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 <br></br>
-<h3><%= link_to 'See attractions', attractions_path %></h3>
+<h4><%= link_to 'See attractions', attractions_path %></h4>
  <% if admin? %>
- <br></br>
-   <h3> <%= link_to 'New Attraction', new_attraction_path %></h3>
+   <h4> <%= link_to 'New Attraction', new_attraction_path %></h4>
  <% end %>
 
 <br>
-<%= flash[:message]  %>
+<p><%= flash[:message] %></p>
 <br>

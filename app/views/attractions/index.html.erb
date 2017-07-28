@@ -1,13 +1,31 @@
 
+ <% if admin? %>
+ 	<%= link_to 'New attraction', new_attraction_path %>
+ <% end %>
+
+ <br></br>
+
+<table  >
+<tr >
+	<th style="padding: 0 10px">Name</th>
+	<th style="padding: 0 10px">Tickets</th>
+	<th style="padding: 0 10px">More details</th>
+</tr>
+<tbody >
 <% @attractions.each do |attraction| %>
+<tr>
+	<td style="padding: 0 10px"> <%= attraction.name %> </td>
+    <td style="padding: 0 10px" align="right"> <%= attraction.tickets %> </td>
 	 <% if admin? %>
-	 <p><%= link_to "Show #{attraction.name}", attraction_path(attraction)%></p>
+	 <td style="padding: 0 10px"><%= link_to "Show #{attraction.name}", attraction_path(attraction)%></td>
 	 <% else %>
-		<p><%= link_to "Go on #{attraction.name}", attraction_path(attraction)%></p>
+		<td style="padding: 0 10px"><%= link_to "Go on #{attraction.name}", attraction_path(attraction)%></td>
 	<% end %>
+	</tr>
+</tbody>
 <% end %>
 
- <% if admin? %>
- 	<%= link_to 'New Attractions', new_attraction_path %>
- <% end %>
+</table>
+
+
 
